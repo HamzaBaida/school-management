@@ -2,45 +2,45 @@
 
 @section('content')
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>School Management</title>
+<div class="container py-4">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
+    <div class="text-center mb-5">
 
-<body class="bg-light">
+        <h1 class="fw-bold text-primary">
+            <i class="bi bi-mortarboard-fill"></i>
+            School Management System
+        </h1>
 
-<div class="container mt-5">
+        <p class="text-muted">
+            Manage Students and Teachers Easily
+        </p>
 
-    <h1 class="text-center mb-5">
-        School Management
-    </h1>
+    </div>
 
-    <div class="row justify-content-center">
+    <div class="row g-4 justify-content-center">
 
-        <!-- Students -->
+        <div class="col-md-5">
 
-        <div class="col-md-4">
-
-            <div class="card shadow-lg border-0 rounded-4">
+            <div class="card shadow-lg border-0 rounded-4 h-100">
 
                 <div class="card-body text-center p-5">
 
-                    <img src="{{ asset('img/student.jpg') }}"
-                         width="120"
-                         class="mb-4">
+                    <i class="bi bi-people-fill display-1 text-primary"></i>
 
-                    <h3 class="mb-3">
+                    <h3 class="mt-4">
                         Students
                     </h3>
 
-                    <a href="/students"
-                       class="btn btn-primary">
-                        Open
+                    <p class="text-muted">
+                        Manage students, add, edit and delete records.
+                    </p>
+
+                    <a href="{{ route('students.index') }}"
+                       class="btn btn-primary btn-lg">
+
+                        <i class="bi bi-arrow-right-circle-fill"></i>
+                        Open Students
+
                     </a>
 
                 </div>
@@ -49,25 +49,28 @@
 
         </div>
 
-        <!-- Teachers -->
+        <div class="col-md-5">
 
-        <div class="col-md-4">
-
-            <div class="card shadow-lg border-0 rounded-4">
+            <div class="card shadow-lg border-0 rounded-4 h-100">
 
                 <div class="card-body text-center p-5">
 
-                    <img src="{{ asset('img/teacher.png') }}"
-                         width="120"
-                         class="mb-4">
+                    <i class="bi bi-person-workspace display-1 text-success"></i>
 
-                    <h3 class="mb-3">
+                    <h3 class="mt-4">
                         Teachers
                     </h3>
 
-                    <a href="/teachers"
-                       class="btn btn-success">
-                        Open
+                    <p class="text-muted">
+                        Manage teachers, add, edit and delete records.
+                    </p>
+
+                    <a href="{{ route('teachers.index') }}"
+                       class="btn btn-success btn-lg">
+
+                        <i class="bi bi-arrow-right-circle-fill"></i>
+                        Open Teachers
+
                     </a>
 
                 </div>
@@ -79,8 +82,5 @@
     </div>
 
 </div>
-
-</body>
-</html>
 
 @endsection

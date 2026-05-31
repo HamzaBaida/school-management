@@ -8,39 +8,43 @@
 
     <title>School Management System</title>
 
-    <link href="/css/app.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
 
     <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <script src="/js/bootstrap.bundle.min.js"></script>
-
-    <link rel="stylesheet" href="/css/style.css">
 
 </head>
 
 <body class="bg-light">
 
-    <!-- Header -->
+    <!-- Header Banner -->
 
-    <div class="container-fluid p-0">
+    <header class="bg-white shadow">
 
-        <img src="/img/header.jpg"
-             class="img-fluid w-100"
-             style="height:140px;object-fit:cover;">
+        <div class="container-fluid p-0">
 
-    </div>
+            <img src="{{ asset('img/header03.png') }}"
+                 alt="School Management Banner"
+                 class="w-100 d-block"
+                 style="height:260px;object-fit:cover;object-position:center;">
+
+        </div>
+
+    </header>
 
     <!-- Navbar -->
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
 
         <div class="container-fluid">
 
             <a class="navbar-brand fw-bold" href="/">
+
                 <i class="bi bi-mortarboard-fill"></i>
                 School Management
+
             </a>
 
             <button class="navbar-toggler"
@@ -55,22 +59,25 @@
             <div class="collapse navbar-collapse"
                  id="navbarSupportedContent">
 
-                <ul class="navbar-nav me-auto">
+                <ul class="navbar-nav ms-auto">
 
                     <li class="nav-item">
                         <a class="nav-link" href="/">
+                            <i class="bi bi-house-fill"></i>
                             Home
                         </a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="/students">
+                            <i class="bi bi-people-fill"></i>
                             Students
                         </a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="/teachers">
+                            <i class="bi bi-person-workspace"></i>
                             Teachers
                         </a>
                     </li>
@@ -85,19 +92,19 @@
 
     <!-- Main Content -->
 
-    <div class="container mt-4">
+    <div class="container-fluid mt-4">
 
         <div class="row">
 
             <!-- Sidebar -->
 
-            <div class="col-md-3">
+            <div class="col-lg-3 mb-4">
 
                 <div class="card shadow border-0">
 
                     <div class="card-header bg-dark text-white">
 
-                        <i class="bi bi-list"></i>
+                        <i class="bi bi-grid-fill"></i>
                         Main Menu
 
                     </div>
@@ -107,7 +114,7 @@
                         <a href="/"
                            class="list-group-item list-group-item-action">
 
-                            <i class="bi bi-house-fill"></i>
+                            <i class="bi bi-house-door-fill"></i>
                             Dashboard
 
                         </a>
@@ -150,11 +157,11 @@
 
             </div>
 
-            <!-- Content -->
+            <!-- Page Content -->
 
-            <div class="col-md-9">
+            <div class="col-lg-9">
 
-                <div class="card shadow-lg border-0">
+                <div class="card border-0 shadow-lg">
 
                     <div class="card-header bg-primary text-white">
 
@@ -175,18 +182,6 @@
 
                 </div>
 
-                <div class="mt-3 text-end">
-
-                    <a href="/"
-                       class="btn btn-primary">
-
-                        <i class="bi bi-house-fill"></i>
-                        Home Page
-
-                    </a>
-
-                </div>
-
             </div>
 
         </div>
@@ -195,10 +190,13 @@
 
     <!-- Footer -->
 
-    <footer class="bg-dark text-white text-center mt-5 py-3">
+    <footer class="bg-dark text-white text-center py-3 mt-5">
 
         <p class="mb-0">
-            © 2026 School Management System
+
+            <i class="bi bi-c-circle"></i>
+            2026 School Management System | Developed by Hamza Baida
+
         </p>
 
     </footer>

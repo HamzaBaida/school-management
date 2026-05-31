@@ -149,7 +149,7 @@
 
                             <td colspan="5" class="text-center py-5">
 
-                                <i class="bi bi-inbox display-4 text-secondary"></i>
+                                <i class="bi bi-person-x display-4 text-secondary"></i>
 
                                 <h5 class="mt-3 text-muted">
                                     No students found
