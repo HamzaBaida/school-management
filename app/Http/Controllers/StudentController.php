@@ -3,62 +3,70 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Student;
 
 class StudentController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
-    }
+   public function index()
+{
+    $students = Student::all();
 
-    /**
-     * Show the form for creating a new resource.
-     */
+    return view('students.list_students', compact('students'));
+}
+
     public function create()
     {
-        //
+    return view('students.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
+        Student::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'section' => $request->section,
+        ]);
+
+        return redirect('/students');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
+//     public function show(string $id)
+//     {
+//         //
+//     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(string $id)
     {
-        //
+        $student = Student::findOrFail($id);
+
+        return view('students.edit', compact('student'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, string $id)
     {
-        //
+        $student = Student::findOrFail($id);
+
+        $student->update([
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'section' => $request->section,
+        ]);
+
+        return redirect('/students')
+            ->with('success', 'Student updated successfully');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(string $id)
     {
-        //
+        $student = Student::findOrFail($id);
+
+        $student->delete();
+
+        return redirect('/students')
+            ->with('success', 'Student delete successfully');
     }
+
+
 }
